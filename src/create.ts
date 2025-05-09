@@ -107,7 +107,6 @@ const main = async () => {
   //   ],
   // });
   // console.log(createManyPost);
-
   // create user.
   // const newUser = await prisma.user.create({
   //   data: {
@@ -116,7 +115,6 @@ const main = async () => {
   //     role: UserRole.user,
   //   },
   // });
-
   // create profile.
   // const newProfile = await prisma.profile.create({
   //   data: {
@@ -124,14 +122,12 @@ const main = async () => {
   //     userId: 1,
   //   },
   // });
-
   // create category.
   // const createCategory = await prisma.category.create({
   //   data: {
   //     name: "software engineering",
   //   },
   // });
-
   // create post
   // const newPost = await prisma.post.create({
   //   data: {
@@ -167,21 +163,20 @@ const main = async () => {
   //   include: { postCategory: true },
   // });
   // many category relation.
-  const newPost = await prisma.post.create({
-    data: {
-      title: "Post title Many relation",
-      content: "This is many to many relationship.",
-      authorId: 3,
-      postCategory: {
-        create: [{ categoryId: 1 }, { categoryId: 3 }, { categoryId: 4 }],
-      },
-    },
-    include: {
-      postCategory: true,
-    },
-  });
-
-  console.log(newPost);
+  // const newPost = await prisma.post.create({
+  //   data: {
+  //     title: "Post title Many relation",
+  //     content: "This is many to many relationship.",
+  //     authorId: 3,
+  //     postCategory: {
+  //       create: [{ categoryId: 1 }, { categoryId: 3 }, { categoryId: 4 }],
+  //     },
+  //   },
+  //   include: {
+  //     postCategory: true,
+  //   },
+  // });
+  // console.log(newPost);
 };
 
 main();

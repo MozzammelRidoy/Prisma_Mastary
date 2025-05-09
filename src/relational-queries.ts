@@ -21,14 +21,27 @@ const main = async () => {
   //     .profile();
 
   // populate api.
-  const result = await prisma.user.findUnique({
-    where: {
-      id: 1,
-    },
+  //   const result = await prisma.user.findUnique({
+  //     where: {
+  //       id: 1,
+  //     },
+  //     include: {
+  //       post: true,
+  //     },
+  //   });
+  //   console.log(result);
+
+  // relational filters.
+  const publishedPostUser = await prisma.user.findMany({
     include: {
-      post: true,
+      post: {
+        where: {
+          published: true,
+        },
+      },
     },
   });
-  console.log(result);
+
+  console.dir(publishedPostUser, { depth: Infinity });
 };
 main();
