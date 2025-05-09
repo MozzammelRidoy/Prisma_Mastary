@@ -18,6 +18,7 @@ model Post {
   author User @relation(fields: [authorId], references: [id]) // one to many relation.
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  postCategory PostCategory[] // many to many relation.
 
   @@map("posts")
 }
@@ -26,7 +27,7 @@ model User {
   id Int @id @default(autoincrement())
   username String @unique
   email String
-  role UserRole
+  role UserRole @default(user)
   profile Profile? // one to one relation
   post Post[] // one to many relation
 
@@ -46,10 +47,21 @@ model Profile {
 model Category {
   id Int @id @default(autoincrement())
   name String
+  postCategory PostCategory[] // many to many relation.
 
   @@map("categories")
 }
 
+// when many to many relation, then create extra table for many to many relation.
+model PostCategory {
+  postId Int
+  post Post @relation(fields: [postId], references: [id]) // many to many relation.
+  categoryId Int
+  category Category @relation(fields: [categoryId], references: [id])
+
+  @@id([postId, categoryId])
+  @@map("post_categories")
+}
 enum UserRole {
   user
   admin
