@@ -32,6 +32,11 @@ const main = async () => {
     where: {
       id: 10,
     },
+    select: {
+      title: true,
+      content: true,
+      authorName: true,
+    },
   });
 
   console.log(findUniqueOrThrow);
