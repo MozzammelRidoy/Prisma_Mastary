@@ -132,7 +132,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\Users\\HP\\Banckend_Twist\\Mongo_Project\\m-53\\Prisma Mastary\\generated\\prisma",
+      "value": "C:\\Users\\HP\\Banckend_Twist\\Mongo_Project\\m-54\\Prisma Mastary\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -146,7 +146,7 @@ const config = {
       }
     ],
     "previewFeatures": [],
-    "sourceFilePath": "C:\\Users\\HP\\Banckend_Twist\\Mongo_Project\\m-53\\Prisma Mastary\\prisma\\schema.prisma",
+    "sourceFilePath": "C:\\Users\\HP\\Banckend_Twist\\Mongo_Project\\m-54\\Prisma Mastary\\prisma\\schema.prisma",
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
