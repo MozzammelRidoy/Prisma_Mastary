@@ -153,18 +153,32 @@ const main = async () => {
   //   },
   // });
   // OR
+  // const newPost = await prisma.post.create({
+  //   data: {
+  //     title: "Post title here.",
+  //     content: "Content here..",
+  //     authorId: 1,
+  //     postCategory: {
+  //       create: {
+  //         categoryId: 2,
+  //       },
+  //     },
+  //   },
+  //   include: { postCategory: true },
+  // });
+  // many category relation.
   const newPost = await prisma.post.create({
     data: {
-      title: "Post title here.",
-      content: "Content here..",
-      authorId: 1,
+      title: "Post title Many relation",
+      content: "This is many to many relationship.",
+      authorId: 3,
       postCategory: {
-        create: {
-          categoryId: 2,
-        },
+        create: [{ categoryId: 1 }, { categoryId: 3 }, { categoryId: 4 }],
       },
     },
-    include: { postCategory: true },
+    include: {
+      postCategory: true,
+    },
   });
 
   console.log(newPost);
