@@ -16,18 +16,93 @@ const main = async () => {
   const createManyPost = await prisma.post.createMany({
     data: [
       {
-        title: "This is title 4",
-        content: "This is conten 4",
+        title: "This is title 1",
+        content: "This is conten 1",
         authorName: "Mozzammel Ridoy",
       },
       {
-        title: "This is title 5",
-        content: "This is conten 5",
+        title: "This is title 2",
+        content: "This is conten 2",
         authorName: "Mozzammel Ridoy",
       },
       {
-        title: "This is title 6",
-        content: "This is conten 6",
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
+        authorName: "Mozzammel Ridoy",
+      },
+      {
+        title: "This is title 3",
+        content: "This is conten 3",
         authorName: "Mozzammel Ridoy",
       },
     ],
