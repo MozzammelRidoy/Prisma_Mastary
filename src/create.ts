@@ -110,11 +110,13 @@ const main = async () => {
   // create user.
   // const newUser = await prisma.user.create({
   //   data: {
-  //     username: "user2",
-  //     email: "user2@mail.com",
+  //     username: "user5",
+  //     age: 24,
+  //     email: "user5@mail.com",
   //     role: UserRole.user,
   //   },
   // });
+  // console.log(newUser);
   // create profile.
   // const newProfile = await prisma.profile.create({
   //   data: {

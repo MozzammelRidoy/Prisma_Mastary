@@ -18,6 +18,7 @@ CREATE TABLE "posts" (
 CREATE TABLE "users" (
     "id" SERIAL NOT NULL,
     "username" TEXT NOT NULL,
+    "age" INTEGER NOT NULL DEFAULT 0,
     "email" TEXT NOT NULL,
     "role" "UserRole" NOT NULL DEFAULT 'user',
 
