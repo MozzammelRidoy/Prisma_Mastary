@@ -24,6 +24,16 @@ const main = async () => {
     },
   });
 
+  // find count others fields with numaric.
+  const countString = await prisma.post.aggregate({
+    _count: {
+      title: true,
+    },
+    where: {
+      published: true,
+    },
+  });
+
   // find number of record..
   const countData = await prisma.user.count();
 
