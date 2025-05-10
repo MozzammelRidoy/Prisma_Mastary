@@ -60,7 +60,60 @@ const main = async () => {
     },
   });
 
-  console.log(startWith);
+  //   console.log(startWith);
+
+  // ends with.
+  const endsWith = await prisma.user.findMany({
+    where: {
+      email: {
+        endsWith: "mail.com",
+      },
+    },
+  });
+  //   console.log(endsWith);
+
+  // exact filtering.
+  const equaltFiltering = await prisma.user.findMany({
+    where: {
+      email: {
+        equals: "user1@mail.com",
+      },
+    },
+  });
+
+  //   console.log(equaltFiltering);
+
+  // array filtering.
+  const userNameArray = ["user1", "user2", "user3"];
+
+  const arrayFiltering = await prisma.user.findMany({
+    where: {
+      username: {
+        in: userNameArray,
+      },
+    },
+  });
+
+  //   console.log(arrayFiltering);
+
+  // depth filtering.
+  const inDepthData = await prisma.user.findUnique({
+    where: {
+      id: 1,
+    },
+    include: {
+      post: {
+        include: {
+          postCategory: {
+            include: {
+              category: true,
+            },
+          },
+        },
+      },
+    },
+  });
+  console.dir(inDepthData, { depth: Infinity });
 };
 
 main();
